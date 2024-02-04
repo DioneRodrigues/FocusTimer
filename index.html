@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>Foco - Pomodoro</title>
+
+    <link rel="shortcut icon" href="./assets/favico.svg" type="image/x-svg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="./src/main.js" defer></script>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-model">
+            <span class="sr-only">Ativar/Desativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button data-action="toggleRunning" class="ph ph-play-circle"></button>
+                <span class="sr-only">Iniciar Contador</span>
+            <button data-action="toggleRunning" class="ph ph-pause-circle"></button>
+                <span class="sr-only">Pausar Contador</span>
+            <button data-action="set" class="ph ph-timer secondary"></button>
+            <span class="sr-only">Ajustar Contador</span>
+            <button data-action="reset" class="ph ph-stop-circle secondary"></button>
+                <span class="sr-only">Reiniciar Contador</span>
+            <button data-action="toggleMusic" class="ph ph-speaker-none secondary"></button>
+                <span class="sr-only">Iniciar Musica</span>
+            <button data-action="toggleMusic" class="ph ph-speaker-high"></button>
+            <span class="sr-only">Parar Musica</span>
+        </section>
+
+    </div>
+</body>
+</html>
